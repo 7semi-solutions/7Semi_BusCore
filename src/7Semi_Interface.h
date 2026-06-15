@@ -1,4 +1,13 @@
 #pragma once
+// #define SENSOR_DEBUG_7SEMI 1
+
+#ifndef SENSOR_DEBUG_7SEMI
+#define SENSOR_DEBUG_7SEMI 0
+#endif
+
+#if SENSOR_DEBUG_7SEMI
+#define DEBUG_7SEMI_CORE
+#endif
 
 #include <Arduino.h>
 #include <Wire.h>

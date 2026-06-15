@@ -1,6 +1,6 @@
 #include "7Semi_SPI.h"
 
-    bool SPI_Interface::beginSPI(
+    bool SPI_7Semi::beginSPI(
         uint8_t csPin,
         SPIClass &spiPort,
         uint32_t spiSpeed,
@@ -24,12 +24,12 @@
         return true;
     }
 
-    bool SPI_Interface::beginI2C(uint8_t, TwoWire &, uint32_t, uint8_t, uint8_t) 
+    bool SPI_7Semi::beginI2C(uint8_t, TwoWire &, uint32_t, uint8_t, uint8_t) 
     {
         return false;
     }
 
-    int8_t SPI_Interface:: write(const uint8_t *reg, uint8_t reg_len, const uint8_t *data, size_t len) 
+    int8_t SPI_7Semi:: write(const uint8_t *reg, uint8_t reg_len, const uint8_t *data, size_t len) 
     {
         if (!spi || !reg || !data || reg_len == 0 || len == 0)
             return -1;
@@ -58,7 +58,7 @@
         return 0;
     }
 
-    int8_t SPI_Interface::read(
+    int8_t SPI_7Semi::read(
         const uint8_t *reg,
         uint8_t reg_len,
         uint8_t *data,

@@ -8,7 +8,7 @@
 #define BUSIO_7SEMI_SPI_WRITE_MASK 0x7F
 #endif
 
-class SPI_Interface : public BusLink_7Semi
+class SPI_7Semi : public BusLink_7Semi
 {
 public:
     SPIClass *spi = nullptr;
